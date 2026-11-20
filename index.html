@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karmo's Braids | Tranças em São Luís, Araçagy e Vargem Grande</title>
+  <meta name="description" content="Karmo's Braids por Lourrany & Kaylane. Especialistas em Box Braids, Crochet Braids e French Curl. Atendimento no Araçagy, a domicílio, Região Metropolitana de São Luís e Vargem Grande." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy-950: #050e1a;
+      --navy-900: #071426;
+      --navy-800: #0d213d;
+      --gold-400: #d6b46f;
+      --gold-500: #c6a15b;
+      --cream-50: #f8f7f4;
+      --cream-100: #f1efe9;
+      --ink-900: #0b172a;
+      --ink-700: #334155;
+      --ink-500: #64748b;
+      --border-subtle: rgba(198, 161, 91, 0.25);
+      --radius-md: 14px;
+      --radius-lg: 22px;
+      --transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--cream-50);
+      color: var(--ink-900);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(7, 20, 38, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.16);
+      color: #ffffff;
+    }
+
+    .nav-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-500);
+      display: grid;
+      place-items: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      color: var(--gold-400);
+      background: rgba(198, 161, 91, 0.08);
+    }
+
+    .brand-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #ffffff;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-400);
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: none;
+      gap: 28px;
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-400);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-950);
+      font-weight: 600;
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(198, 161, 91, 0.25);
+    }
+
+    .btn-outline-gold {
+      border-color: rgba(198, 161, 91, 0.55);
+      color: var(--gold-400);
+      background: transparent;
+    }
+
+    .btn-outline-gold:hover {
+      background: rgba(198, 161, 91, 0.1);
+    }
+
+    .btn-outline-dark {
+      border-color: rgba(11, 23, 42, 0.2);
+      color: var(--ink-900);
+      background: #ffffff;
+    }
+
+    .btn-outline-dark:hover {
+      border-color: var(--gold-500);
+      color: var(--navy-900);
+    }
+
+    /* Hero */
+    .hero {
+      background:
+        radial-gradient(circle at 85% 20%, rgba(198, 161, 91, 0.14), transparent 45%),
+        linear-gradient(160deg, var(--navy-900) 0%, var(--navy-950) 100%);
+      color: #ffffff;
+      padding: 76px 0 84px;
+      border-bottom: 1px solid rgba(198, 161, 91, 0.2);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold-400);
+      margin-bottom: 14px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.7rem);
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-400);
+    }
+
+    .hero p {
+      font-size: 1.04rem;
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 540px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-card {
+      background: rgba(13, 33, 61, 0.65);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .hero-frame {
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-md);
+      background: linear-gradient(145deg, #102647, #06101e);
+      border: 1px solid rgba(198, 161, 91, 0.28);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-frame-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--gold-400);
+      margin-bottom: 6px;
+    }
+
+    .hero-frame-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.65rem;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .hero-frame-note {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    /* Sections */
+    section {
+      padding: 84px 0;
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 44px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      color: var(--ink-900);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--ink-700);
+      font-size: 1rem;
+    }
+
+    /* Gallery */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .filter-btn {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(11, 23, 42, 0.16);
+      background: #ffffff;
+      color: var(--ink-700);
+      font-size: 0.86rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--navy-900);
+      color: var(--gold-400);
+      border-color: var(--navy-900);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border: 1px solid rgba(11, 23, 42, 0.08);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-500);
+      box-shadow: 0 14px 30px rgba(7, 20, 38, 0.08);
+    }
+
+    .gallery-media {
+      aspect-ratio: 4 / 5;
+      background: var(--navy-900);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gallery-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-info {
+      padding: 18px 20px;
+    }
+
+    .gallery-info h3 {
+      font-size: 1.35rem;
+      color: var(--ink-900);
+      margin-bottom: 4px;
+    }
+
+    .gallery-info p {
+      font-size: 0.88rem;
+      color: var(--ink-500);
+    }
+
+    /* Attendance & Coverage */
+    .coverage-section {
+      background: var(--cream-100);
+      border-top: 1px solid rgba(11, 23, 42, 0.06);
+      border-bottom: 1px solid rgba(11, 23, 42, 0.06);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .info-card {
+      background: #ffffff;
+      border: 1px solid rgba(11, 23, 42, 0.08);
+      border-radius: var(--radius-md);
+      padding: 28px;
+    }
+
+    .info-card .eyebrow {
+      margin-bottom: 8px;
+    }
+
+    .info-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--ink-900);
+    }
+
+    .info-card p {
+      font-size: 0.94rem;
+      color: var(--ink-700);
+    }
+
+    /* About */
+    .about-box {
+      background: linear-gradient(155deg, var(--navy-900), var(--navy-950));
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: clamp(32px, 6vw, 60px);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .about-box h2 {
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+
+    .about-box p {
+      color: rgba(255, 255, 255, 0.84);
+      max-width: 720px;
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+
+    .about-sig {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(198, 161, 91, 0.25);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      color: var(--gold-400);
+    }
+
+    /* Reviews & CTA */
+    .cta-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      background: #ffffff;
+      border: 1px solid rgba(198, 161, 91, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .cta-strip h3 {
+      font-size: 1.75rem;
+      margin-bottom: 6px;
+    }
+
+    .cta-strip p {
+      color: var(--ink-700);
+      font-size: 0.95rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy-950);
+      color: rgba(255, 255, 255, 0.72);
+      padding: 48px 0;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(198, 161, 91, 0.18);
+    }
+
+    .footer-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-400);
+    }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 60;
+      background: linear-gradient(135deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-950);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 12px 18px;
+      border-radius: 999px;
+      box-shadow: 0 12px 28px rgba(5, 14, 26, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <!-- Substitua .brand-mark por <img src="./assets/logo.png" alt="Karmo's Braids"> quando subir sua logo -->
+        <span class="brand-mark">KB</span>
+        <span>
+          <span class="brand-name">Karmo's Braids</span>
+          <span class="brand-sub">Por Lourrany &amp; Kaylane</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#galeria">Galeria</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#avaliacoes">Avaliações</a>
+      </nav>
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/5598982019997?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Karmo%27s%20Braids%20e%20gostaria%20de%20agendar%20ou%20saber%20mais."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero / Vitrine -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Araçagy • São Luís • Vargem Grande</span>
+        <h1>Tranças com acabamento refinado e <em>identidade</em>.</h1>
+        <p>
+          Vitrine oficial da Karmo's Braids. Cuidado nos detalhes, caimento natural e atendimento
+          em local próprio no Araçagy ou a domicílio na Região Metropolitana de São Luís e Vargem Grande.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5598982019997?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20com%20a%20Karmo%27s%20Braids."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar no WhatsApp
+          </a>
+          <a class="btn btn-outline-gold" href="#galeria">Ver trabalhos</a>
+        </div>
+
+        <div class="hero-highlights">
+          <span>Local próprio no Araçagy</span>
+          <span>•</span>
+          <span>Atendimento a domicílio</span>
+          <span>•</span>
+          <span>WhatsApp: (98) 98201-9997</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-frame">
+          <span class="hero-frame-tag">Karmo's Braids • Portfólio</span>
+          <div class="hero-frame-title">Box Braids, Crochet &amp; French Curl</div>
+          <p class="hero-frame-note">
+            Acabamento limpo, volume na medida certa e atenção a cada detalhe do penteado.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria de Trabalhos -->
+  <section id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Portfólio Visual</span>
+        <h2>Trabalhos realizados</h2>
+        <p>
+          Confira exemplos de estilos executados pela Karmo's Braids. Substitua os caminhos das
+          imagens pelos arquivos reais da sua pasta no GitHub.
+        </p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrar estilos">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="crochet">Crochet Braids</button>
+        <button class="filter-btn" data-filter="box">Box Braids com Cachos</button>
+        <button class="filter-btn" data-filter="french">French Curl</button>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card" data-category="crochet">
+          <div class="gallery-media">
+            <!-- Substitua src="./assets/crochet-braids.jpg" pela foto correspondente -->
+            <img src="./assets/crochet-braids.jpg" alt="Crochet Braids feito pela Karmo's Braids" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-info">
+            <h3>Crochet Braids</h3>
+            <p>Cachos bem definidos, volume equilibrado e visual natural.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="box">
+          <div class="gallery-media">
+            <!-- Substitua src="./assets/box-braids-cachos.jpg" pela foto correspondente -->
+            <img src="./assets/box-braids-cachos.jpg" alt="Box Braids com cachos feito pela Karmo's Braids" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-info">
+            <h3>Box Braids com Cachos</h3>
+            <p>Trançado alinhado com finalização cacheada e movimento.</p>
+          </div>
+        </article>
+
+        <article class="gallery-card" data-category="french">
+          <div class="gallery-media">
+            <!-- Substitua src="./assets/french-curl.jpg" pela foto correspondente -->
+            <img src="./assets/french-curl.jpg" alt="French Curl feito pela Karmo's Braids" onerror="this.style.display='none'" />
+          </div>
+          <div class="gallery-info">
+            <h3>French Curl</h3>
+            <p>Comprimento elegante, definição leve e acabamento sofisticado.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atendimento e Regiões -->
+  <section id="atendimento" class="coverage-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Onde e Como Atendemos</span>
+        <h2>Praticidade para você</h2>
+        <p>
+          Organizamos o atendimento para que você tenha tranquilidade, conforto e clareza desde o
+          primeiro contato até a finalização.
+        </p>
+      </div>
+
+      <div class="coverage-grid">
+        <div class="info-card">
+          <span class="eyebrow">Base Principal</span>
+          <h3>Região do Araçagy</h3>
+          <p>
+            Atendimento em local próprio na região do Araçagy, com agendamento prévio para garantir
+            dedicação exclusiva ao seu horário.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <span class="eyebrow">Comodidade</span>
+          <h3>Atendimento a Domicílio</h3>
+          <p>
+            Se preferir ser atendida no conforto da sua casa, consulte disponibilidade para
+            atendimento a domicílio.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <span class="eyebrow">Cobertura</span>
+          <h3>São Luís, Adjacências e Vargem Grande</h3>
+          <p>
+            Atendemos na Região Metropolitana de São Luís e adjacências, além de atendimentos
+            também em Vargem Grande.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre">
+    <div class="container">
+      <div class="about-box">
+        <span class="eyebrow">Sobre Nós</span>
+        <h2>Uma história construída a quatro mãos</h2>
+        <p>
+          A Karmo's Braids nasceu do vínculo e da paixão de duas irmãs que começaram aplicando
+          tranças uma na outra, descobrindo no cuidado diário o prazer de transformar autoestima e
+          valorizar a identidade de cada mulher.
+        </p>
+        <p>
+          O que começou entre irmãs ganhou consistência, dedicação e o desejo de expandir —
+          transformando a prática e o capricho em um negócio próprio, feito com proximidade,
+          respeito ao tempo de cada cliente e amor pelo ofício.
+        </p>
+        <div class="about-sig">Por Lourrany &amp; Kaylane</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avaliações e Contato -->
+  <section id="avaliacoes">
+    <div class="container">
+      <div class="cta-strip">
+        <div>
+          <span class="eyebrow">Seu Feedback Importa</span>
+          <h3>Já fez suas tranças com a Karmo's Braids?</h3>
+          <p>
+            Deixe sua avaliação no Google, acompanhe novidades no Instagram ou fale direto pelo
+            WhatsApp.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a
+            class="btn btn-outline-dark"
+            href="https://g.page/r/CVEeastvplGsECE/review"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Avaliar no Google
+          </a>
+
+          <a
+            class="btn btn-outline-dark"
+            href="https://www.instagram.com/_.karmobraids?utm_source=ig_web_button_share_sheet&gwpx=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <a
+            class="btn btn-gold"
+            href="https://wa.me/5598982019997?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20os%20atendimentos%20da%20Karmo%27s%20Braids."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container footer-wrap">
+      <div>
+        <strong style="color: #ffffff; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;">
+          Karmo's Braids
+        </strong>
+        <div>Por Lourrany &amp; Kaylane • Araçagy, Região Metropolitana de São Luís e Vargem Grande</div>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://wa.me/5598982019997" target="_blank" rel="noopener noreferrer">(98) 98201-9997</a>
+        <a href="https://www.instagram.com/_.karmobraids?utm_source=ig_web_button_share_sheet&gwpx=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://g.page/r/CVEeastvplGsECE/review" target="_blank" rel="noopener noreferrer">Avaliações Google</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante WhatsApp -->
+  <a
+    class="wa-float"
+    href="https://wa.me/5598982019997?text=Ol%C3%A1%21%20Quero%20agendar%20com%20a%20Karmo%27s%20Braids."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Agendar pelo WhatsApp"
+  >
+    WhatsApp • (98) 98201-9997
+  </a>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.gallery-card');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach((card) => {
+          const category = card.getAttribute('data-category');
+          card.style.display = (filter === 'all' || filter === category) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
